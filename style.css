@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary: #2563eb;
+    --secondary: #1e40af;
+    --success: #10b981;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --light: #f8fafc;
+    --dark: #1e293b;
+    --gray: #64748b;
+    --border: #e2e8f0;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --radius: 8px;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background: white;
+    border-radius: var(--radius);
+    padding: 25px;
+    box-shadow: var(--shadow);
+    height: fit-content;
+}
+
+.card h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    color: var(--gray);
+}
+
+.stats strong {
+    color: var(--primary);
+}
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    border-radius: 50px;
+    padding: 12px 20px;
+}
+
+.products-list {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: var(--light);
+    border-radius: var(--radius);
+    border-left: 4px solid var(--primary);
+    transition: all 0.3s;
+}
+
+.product-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow);
+}
+
+.product-info h3 {
+    color: var(--dark);
+    margin-bottom: 5px;
+}
+
+.product-details {
+    display: flex;
+    gap: 15px;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.product-price {
+    font-weight: bold;
+    color: var(--success);
+}
+
+.product-stock {
+    color: var(--warning);
+}
+
+.product-category {
+    background: var(--primary);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.delete-btn {
+    background: var(--danger);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+    transform: scale(1.1);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--gray);
+}
+
+.empty-state p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.category-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.category-eletronicos {
+    background: #3b82f6;
+    color: white;
+}
+
+.category-roupas {
+    background: #8b5cf6;
+    color: white;
+}
+
+.category-livros {
+    background: #10b981;
+    color: white;
+}
+
+.category-casa {
+    background: #f59e0b;
+    color: white;
+}
+
+.category-outros {
+    background: #6b7280;
+    color: white;
+}
